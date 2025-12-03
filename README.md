@@ -4,7 +4,7 @@
 
 #### Decompiled .ysc files
 
-[![gv](https://img.shields.io/badge/Game%20Version-Online%201.71%20|%20Build%203856-blue)](https://github.com/szalikdev/v-decompiled-scripts)
+[![gv](https://img.shields.io/badge/Game%20Version-Online%201.71%20|%20Build%203586-blue)](https://github.com/szalikdev/v-decompiled-scripts)
 
 ## Credits
 
