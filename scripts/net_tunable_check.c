@@ -43,10 +43,10 @@ void main() // Position - 0x0 (0)
 
 	while (true)
 	{
-		if (_SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1958778 == 1)
+		if (_SHOULD_NETWORK_SCRIPT_TERMINATE() || Global_1963151 == 1)
 			func_6();
 	
-		if (func_1(&uLocal_19, &Global_299024))
+		if (func_1(&uLocal_19, &Global_299578))
 			func_6();
 	
 		BUILTIN::WAIT(0);
@@ -124,7 +124,7 @@ BOOL func_1(var uParam0, BOOL bParam1) // Position - 0x6D (109)
 				uParam0->f_4 = 0;
 				*uParam0 = *uParam0 + 1;
 			
-				if (*uParam0 >= 29)
+				if (*uParam0 >= 30)
 				{
 					*uParam0 = 0;
 					*bParam1 = 0;
@@ -21385,20 +21385,20 @@ void func_2(int iParam0, var uParam1) // Position - 0x1CD (461)
 
 int func_3() // Position - 0x1D086 (118918)
 {
-	if (Global_2692853)
+	if (Global_2693290)
 		return 32;
 
-	return 32 - Global_2692854;
+	return 32 - Global_2693291;
 }
 
 Hash func_4(int iParam0) // Position - 0x1D0A1 (118945)
 {
 	var unk;
 
-	if (iParam0 >= 28)
+	if (iParam0 >= 29)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "CONTENT_MODIFIER_", 64);
-		TEXT_LABEL_APPEND_INT(&unk, iParam0 - 28, 64);
+		TEXT_LABEL_APPEND_INT(&unk, iParam0 - 29, 64);
 		return MISC::GET_HASH_KEY(&unk);
 	}
 
@@ -21488,7 +21488,10 @@ Hash func_4(int iParam0) // Position - 0x1D0A1 (118945)
 		case 27:
 			return 2;
 	
-		case 29:
+		case 28:
+			return 8031040;
+	
+		case 30:
 			TEXT_LABEL_ASSIGN_STRING(&unk, "ILLEGAL TUNABLE CONTEXT", 64);
 			break;
 	}
@@ -21496,7 +21499,7 @@ Hash func_4(int iParam0) // Position - 0x1D0A1 (118945)
 	return 0;
 }
 
-void func_5() // Position - 0x1D2B0 (119472)
+void func_5() // Position - 0x1D2C0 (119488)
 {
 	MISC::CLEAR_TACTICAL_NAV_MESH_POINTS();
 	MISC::ADD_STUNT_JUMP(-9f, -9f, -9f, -10f, -10f, -10f, -25f, -25f, -25f, -28f, -28f, -28f, 0f, 0f, 0f, 0, 0, 0);
@@ -21505,22 +21508,22 @@ void func_5() // Position - 0x1D2B0 (119472)
 	return;
 }
 
-void func_6() // Position - 0x1D32F (119599)
+void func_6() // Position - 0x1D33F (119615)
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x1D33B (119611)
+BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x1D34B (119627)
 {
-	if (Global_1575058 == false)
+	if (Global_1575062 == false)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
 	if (func_14())
 		return true;
 
-	if (Global_2699129)
+	if (Global_2699567)
 		return true;
 
 	if (func_13())
@@ -21543,7 +21546,7 @@ BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x1D33B (119611)
 	return false;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1D3BF (119743)
+Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1D3CF (119759)
 {
 	switch (func_10())
 	{
@@ -21557,9 +21560,9 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x1D3BF (119743)
 	return 0;
 }
 
-Hash func_9() // Position - 0x1D3F2 (119794)
+Hash func_9() // Position - 0x1D402 (119810)
 {
-	switch (Global_2699236)
+	switch (Global_2699676)
 	{
 		case 0:
 			return joaat("freemode");
@@ -21571,17 +21574,17 @@ Hash func_9() // Position - 0x1D3F2 (119794)
 	return joaat("freemode");
 }
 
-int func_10() // Position - 0x1D416 (119830)
+int func_10() // Position - 0x1D426 (119846)
 {
-	return Global_33281;
+	return Global_33775;
 }
 
-BOOL func_11() // Position - 0x1D421 (119841)
+BOOL func_11() // Position - 0x1D431 (119857)
 {
-	return Global_2684745.f_700;
+	return Global_2685150.f_700;
 }
 
-BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D430 (119856)
+BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D440 (119872)
 {
 	if (SCRIPT::GET_EVENT_EXISTS(SCRIPT_EVENT_QUEUE_NETWORK, iParam0))
 		return true;
@@ -21589,13 +21592,13 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x1D430 (119856)
 	return false;
 }
 
-BOOL func_13() // Position - 0x1D447 (119879)
+BOOL func_13() // Position - 0x1D457 (119895)
 {
-	return Global_2696538;
+	return Global_2696964;
 }
 
-BOOL func_14() // Position - 0x1D453 (119891)
+BOOL func_14() // Position - 0x1D463 (119907)
 {
-	return Global_2684745.f_695;
+	return Global_2685150.f_695;
 }
 
